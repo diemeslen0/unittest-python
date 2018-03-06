@@ -18,7 +18,7 @@ Bob and Emergency are inconsistent.
 '''
 import unittest
 
-from unittet-python.phonebook import Phonebook
+from phonebook import Phonebook
 
 class PhonebookTest(unittest.TestCase):
     
@@ -76,16 +76,19 @@ class PhonebookTest(unittest.TestCase):
         self.phonebook.add("Mary", "012345")
         self.assertTrue(self.phonebook.is_consistent())
     
+    @unittest.skip("WIP")
     def test_phonebook_with_duplicate_entried_is_inconsistent(self):
         self.phonebook.add("Bob", "12345")
         self.phonebook.add("Mary", "12345")
         self.assertFalse(self.phonebook.is_consistent())
     
+    @unittest.skip("WIP")
     def test_phonebook_with_numbers_that_prefix_one_another_is_inconsistent(self):
         self.phonebook.add("Bob", "12345")
         self.phonebook.add("Mary", "123")
         self.assertFalse(self.phonebook.is_consistent())
 
+    @unittest.skip("WIP")
     def test_phonebook_adds_names_and_numbers(self):
         self.phonebook.add("Sue", "12345")
         self.assertIn("Sue", self.phonebook.get_names())
