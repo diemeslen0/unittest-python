@@ -13,3 +13,9 @@ class Phonebook:
     
     def is_consistent(self):
         return True
+    
+    def names(self):
+        return self.entries.keys()
+    
+    def numbers(self):
+        return self.entries.values()
